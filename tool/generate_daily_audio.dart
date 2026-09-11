@@ -56,7 +56,22 @@ Future<void> main(List<String> args) async {
   var skipped = 0;
   final manifestEntries = <Map<String, dynamic>>[];
 
-  for (var index = 0; index < Verse.dailyVerses.length; index++) {
+  // Start from *today's* rotation index and wrap around, rather than
+  // always 0, 1, 2, .... ElevenLabs' free tier only covers a fraction of
+  // 365 verses per run (see the workflow's doc comment), so a plain
+  // ascending order would mean whichever days are late in Verse.dailyVerses
+  // stay on the on-device fallback voice for months while earlier days
+  // finish first purely by list position — unrelated to which day anyone
+  // is actually hearing. Starting from today means whatever's due to run
+  // out of quota next, runs out having covered today and the nearest
+  // upcoming days first.
+  final todayIndex = Verse.indexForDate(DateTime.now());
+  final order = [
+    for (var i = 0; i < Verse.dailyVerses.length; i++)
+      (todayIndex + i) % Verse.dailyVerses.length,
+  ];
+
+  for (final index in order) {
     final verse = Verse.dailyVerses[index];
     // The exact text spoken — kept identical to AppState.toggleVersePlayback
     // so the shared file matches what a direct ElevenLabs/on-device call
@@ -98,6 +113,13 @@ Future<void> main(List<String> args) async {
       'file': 'verse-$index.mp3',
     });
   }
+
+  // Generation order starts from today's index (see above) and wraps
+  // around, but the published manifest is for humans browsing the site —
+  // list it back in calendar order regardless.
+  manifestEntries.sort(
+    (a, b) => (a['index'] as int).compareTo(b['index'] as int),
+  );
 
   final manifestFile = File('${outDir.path}/manifest.json');
   await manifestFile.writeAsString(
