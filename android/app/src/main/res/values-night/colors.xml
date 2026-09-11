@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Dark-theme widget colors. Mirrors the "Dark theme" row of the design's
+  Design Tokens table, applied to the two home-screen widgets.
+-->
+<resources>
+    <color name="widget_text_primary">#FFF7F0E2</color>
+    <!-- rgba(244,234,216,0.6) over the widget's own opaque background. -->
+    <color name="widget_text_secondary">#99F4EAD8</color>
+    <color name="widget_accent">#FFE8B65A</color>
+</resources>

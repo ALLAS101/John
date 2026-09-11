@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- The small gold chip beside "JOHN 3:16" on the large widget. -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+    <corners android:radius="5dp" />
+    <gradient
+        android:type="linear"
+        android:angle="135"
+        android:startColor="#FFE8B65A"
+        android:endColor="#FFD97742" />
+</shape>

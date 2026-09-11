@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Small (2×2) widget layout. Mirrors the "Small (2 × 2)" section of the
+  design's Widget screen: verse fragment top, "JOHN 3:16" eyebrow bottom.
+-->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/widget_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/verse_widget_bg_small"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/widget_verse_small"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="top"
+        android:fontFamily="@font/lora_italic"
+        android:textStyle="italic"
+        android:textSize="14.5sp"
+        android:lineSpacingMultiplier="1.1"
+        android:maxLines="3"
+        android:ellipsize="end"
+        android:textColor="@color/widget_text_primary"
+        tools:text="God so loved the world…" />
+
+    <TextView
+        android:id="@+id/widget_eyebrow_small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/inter_regular"
+        android:textStyle="bold"
+        android:textSize="10sp"
+        android:letterSpacing="0.1"
+        android:textColor="@color/widget_accent"
+        android:text="@string/widget_eyebrow_text" />
+</LinearLayout>

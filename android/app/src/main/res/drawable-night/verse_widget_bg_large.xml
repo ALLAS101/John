@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Large (4x2) widget background — dark theme. Mirrors the design's
+  `linear-gradient(150deg,#1B2145 0%,#0D1128 58%,#0A0D1C 100%)`. See
+  res/drawable/verse_widget_bg_large.xml for the angle-approximation note.
+-->
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+    <corners android:radius="28dp" />
+    <gradient
+        android:type="linear"
+        android:angle="315"
+        android:startColor="#FF1B2145"
+        android:centerColor="#FF0D1128"
+        android:endColor="#FF0A0D1C" />
+</shape>

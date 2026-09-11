@@ -1,0 +1,52 @@
+name: Generate shared daily verse audio
+
+# Regenerates the ElevenLabs audio for Verse.dailyVerses (see
+# tool/generate_daily_audio.dart's doc comment) and publishes it to
+# docs/audio/, which GitHub Pages serves — every user's app then downloads
+# that one shared file (DailyAudioService) instead of each calling
+# ElevenLabs individually for identical content.
+#
+# Triggers only when the verse content itself changes (so this doesn't run
+# — and doesn't spend ElevenLabs quota — on every unrelated commit), plus a
+# manual button for re-running on demand. See the top-level README's
+# "Shared daily audio" section for the one-time repo setup this needs
+# (the ELEVENLABS_API_KEY secret, enabling Pages).
+on:
+  push:
+    branches: [master]
+    paths:
+      - "lib/models/verse.dart"
+      - "tool/generate_daily_audio.dart"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+
+      - run: flutter pub get
+
+      - name: Generate audio for any changed/new verses
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+        run: dart run tool/generate_daily_audio.dart
+
+      - name: Publish docs/audio if anything changed
+        run: |
+          if [ -n "$(git status --porcelain docs/audio)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add docs/audio
+            git commit -m "Generate shared daily verse audio"
+            git push
+          else
+            echo "No audio changes to publish."
+          fi

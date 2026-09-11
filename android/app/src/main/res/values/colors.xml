@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Light-theme widget colors (default — no `-night` qualifier). Mirrors the
+  "Light theme" row of the design's Design Tokens table, applied to the two
+  home-screen widgets. See res/values-night/colors.xml for dark.
+-->
+<resources>
+    <color name="widget_text_primary">#FF12172B</color>
+    <!-- rgba(22,27,48,0.55) over the widget's own opaque background. -->
+    <color name="widget_text_secondary">#8C161B30</color>
+    <color name="widget_accent">#FF8A5910</color>
+</resources>

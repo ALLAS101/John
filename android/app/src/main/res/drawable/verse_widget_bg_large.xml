@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Large (4x2) widget background — light theme. Mirrors the design's
+  `linear-gradient(150deg,#FFFFFF 0%,#FFF8EA 62%,#FBEFDA 100%)`; Android
+  shape gradients only support 45°-step angles, so 315° (top-left to
+  bottom-right) is the closest approximation. Dark theme is
+  res/drawable-night/verse_widget_bg_large.xml.
+-->
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+    <corners android:radius="28dp" />
+    <gradient
+        android:type="linear"
+        android:angle="315"
+        android:startColor="#FFFFFFFF"
+        android:centerColor="#FFFFF8EA"
+        android:endColor="#FFFBEFDA" />
+</shape>

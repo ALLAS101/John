@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  "Large (4 × 2)" from the design's Widget screen. Real refresh timing comes
+  from `home_widget`'s exact-alarm scheduler (see AppState/HomeWidgetService
+  + HomeWidgetScheduledUpdateReceiver in AndroidManifest.xml), so
+  updatePeriodMillis is 0 rather than a redundant system-chosen interval.
+-->
+<appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
+    android:minWidth="250dp"
+    android:minHeight="110dp"
+    android:targetCellWidth="4"
+    android:targetCellHeight="2"
+    android:updatePeriodMillis="0"
+    android:initialLayout="@layout/verse_widget_large"
+    android:description="@string/widget_large_description"
+    android:resizeMode="none"
+    android:widgetCategory="home_screen" />
