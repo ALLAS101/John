@@ -59,6 +59,13 @@ class DailyAudioService {
 
   static bool get isConfigured => _resolvedBaseUrl.isNotEmpty;
 
+  /// The published URL for [verseIndex]'s shared audio — no network or disk
+  /// access, just string-building. Used directly on web (see `AppState`),
+  /// where there's no `path_provider` disk cache to write into, so the
+  /// player streams straight from this URL instead of going through
+  /// [fetchCached].
+  static String urlFor(int verseIndex) => '$_resolvedBaseUrl/verse-$verseIndex.mp3';
+
   /// Returns a local file containing today's shared verse audio, from the
   /// on-disk cache when available (one cached file per rotation index —
   /// see `Verse.indexForDate`; the *content* for a given index only changes
@@ -88,7 +95,7 @@ class DailyAudioService {
     final shouldClose = client == null && debugHttpClientOverride == null;
     try {
       final response = await httpClient
-          .get(Uri.parse('$_resolvedBaseUrl/verse-$verseIndex.mp3'))
+          .get(Uri.parse(urlFor(verseIndex)))
           .timeout(const Duration(seconds: 15));
 
       if (response.statusCode != 200) {

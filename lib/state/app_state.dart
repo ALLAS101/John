@@ -1,6 +1,5 @@
 import 'dart:async';
 import 'dart:convert';
-import 'dart:io';
 
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/foundation.dart';
@@ -134,10 +133,11 @@ class AppState extends ChangeNotifier {
   // Any failure in tier 1 or 2 — not configured, no network, a bad
   // response, playback erroring — falls through to the next tier rather
   // than surfacing an error; only once *every* tier has failed does the
-  // user see one. Tiers 1 and 2 share `_playAudioFile` (obtain a File, play
-  // it, track progress) since they only differ in *how* they get that file;
-  // tier 3 is different enough (utterance-based, not file-based) to stay
-  // its own thing.
+  // user see one. Tiers 1 and 2 share `_playAudioSource` (obtain a playable
+  // `Source` — a cached file, or on web a URL/raw bytes — play it, track
+  // progress) since they only differ in *how* they get that source; tier 3
+  // is different enough (utterance-based, not source-based) to stay its own
+  // thing.
   //
   // No tier reliably resumes from a paused position (true of on-device
   // engines especially), so "Pause" stops playback outright rather than
@@ -322,35 +322,45 @@ class AppState extends ChangeNotifier {
     final fullText = '${v.text} ${v.reference}, ${v.translation}.';
 
     // Falls through tiers silently on failure — see the "Verse playback"
-    // doc comment for why.
+    // doc comment for why. On web there's no `path_provider` disk cache to
+    // write into (`getApplicationSupportDirectory` has no web
+    // implementation), so each tier is played straight from memory/URL
+    // instead of through a cached `File` — see `_playAudioSource`.
     if (DailyAudioService.isConfigured) {
-      if (await _playAudioFile(() => DailyAudioService.fetchCached(verseIndex))) {
-        return;
-      }
+      final played = kIsWeb
+          ? await _playAudioSource(
+              () async => UrlSource(DailyAudioService.urlFor(verseIndex)))
+          : await _playAudioSource(() async => DeviceFileSource(
+              (await DailyAudioService.fetchCached(verseIndex)).path));
+      if (played) return;
     }
     if (ElevenLabsService.isConfigured) {
-      if (await _playAudioFile(() => ElevenLabsService.synthesizeCached(fullText))) {
-        return;
-      }
+      final played = kIsWeb
+          ? await _playAudioSource(() async =>
+              BytesSource(await ElevenLabsService.synthesizeBytesOnly(fullText)))
+          : await _playAudioSource(() async => DeviceFileSource(
+              (await ElevenLabsService.synthesizeCached(fullText)).path));
+      if (played) return;
     }
 
     await _playViaOnDeviceTts(v);
   }
 
-  /// Obtains a playable file via [obtainFile] and plays it through
+  /// Obtains a playable [Source] via [obtainSource] and plays it through
   /// [_audioPlayer] — shared by the shared-daily-audio and ElevenLabs-direct
-  /// tiers, which only differ in where the file comes from. Returns true if
-  /// playback actually started *or* the user stopped before it could (both
-  /// mean "don't also try the next tier"); false means "this tier failed,
-  /// try the next one".
-  Future<bool> _playAudioFile(Future<File> Function() obtainFile) async {
+  /// tiers, which only differ in where the audio comes from (a cached file
+  /// on non-web platforms; a URL or raw bytes on web, where there's no disk
+  /// cache — see `toggleVersePlayback`). Returns true if playback actually
+  /// started *or* the user stopped before it could (both mean "don't also
+  /// try the next tier"); false means "this tier failed, try the next one".
+  Future<bool> _playAudioSource(Future<Source> Function() obtainSource) async {
     final generation = ++_playbackGeneration;
     isPreparingVerseAudio = true;
     notifyListeners();
 
-    File? file;
+    Source? source;
     try {
-      file = await obtainFile();
+      source = await obtainSource();
     } catch (e) {
       debugPrint('Audio tier unavailable, trying the next one: $e');
     }
@@ -359,7 +369,7 @@ class AppState extends ChangeNotifier {
       // stopVersePlayback() ran while the request was in flight.
       return true; // not an error — don't also try the next tier
     }
-    if (file == null) {
+    if (source == null) {
       isPreparingVerseAudio = false;
       notifyListeners();
       return false;
@@ -367,7 +377,7 @@ class AppState extends ChangeNotifier {
 
     _ensureAudioPlayerReady();
     try {
-      await _audioPlayer.play(DeviceFileSource(file.path));
+      await _audioPlayer.play(source);
     } catch (e) {
       debugPrint('Playback failed, trying the next tier: $e');
       isPreparingVerseAudio = false;

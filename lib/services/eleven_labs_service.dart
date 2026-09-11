@@ -1,5 +1,6 @@
 import 'dart:convert';
 import 'dart:io';
+import 'dart:typed_data';
 
 import 'package:crypto/crypto.dart';
 import 'package:http/http.dart' as http;
@@ -103,5 +104,27 @@ class ElevenLabsService {
     await cacheDir.create(recursive: true);
     await file.writeAsBytes(bytes, flush: true);
     return file;
+  }
+
+  /// Same call as [synthesizeCached], but returns raw bytes with no on-disk
+  /// caching — used on web, where there's no `path_provider` directory to
+  /// cache into (`AppState` plays these bytes directly via `BytesSource`
+  /// instead of writing a file). Every call re-hits the API, so this is only
+  /// used for the less-common paths (see this class's doc comment).
+  static Future<Uint8List> synthesizeBytesOnly(
+    String text, {
+    http.Client? client,
+  }) async {
+    if (!isConfigured) {
+      throw ElevenLabsException(
+        'ElevenLabs is not configured (no ELEVENLABS_API_KEY).',
+      );
+    }
+    return ElevenLabsCore.synthesizeBytes(
+      text,
+      apiKey: _resolvedApiKey,
+      voiceId: _voiceId,
+      client: client,
+    );
   }
 }
