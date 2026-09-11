@@ -6,17 +6,27 @@ name: Generate shared daily verse audio
 # that one shared file (DailyAudioService) instead of each calling
 # ElevenLabs individually for identical content.
 #
-# Triggers only when the verse content itself changes (so this doesn't run
-# — and doesn't spend ElevenLabs quota — on every unrelated commit), plus a
-# manual button for re-running on demand. See the top-level README's
-# "Shared daily audio" section for the one-time repo setup this needs
-# (the ELEVENLABS_API_KEY secret, enabling Pages).
+# Triggers when the verse content itself changes, on a daily schedule, and
+# via a manual button. The daily run exists because ElevenLabs' free tier
+# has a monthly character quota far smaller than 365 verses' worth of
+# audio: `tool/generate_daily_audio.dart` skips any verse whose audio is
+# already cached (unchanged text, matching .sha256), so a run with nothing
+# new to do costs nothing — it just re-confirms everyone's covered. Once
+# quota resets each month, the next scheduled run naturally continues
+# backfilling wherever the previous one left off, until every day of the
+# year has real shared audio. See the top-level README's "Shared daily
+# audio" section for the one-time repo setup this needs (the
+# ELEVENLABS_API_KEY secret, enabling Pages).
 on:
   push:
     branches: [master]
     paths:
       - "lib/models/verse.dart"
       - "tool/generate_daily_audio.dart"
+  schedule:
+    # 05:00 UTC daily — arbitrary; just needs to run more often than
+    # ElevenLabs quota resets so the backlog keeps shrinking automatically.
+    - cron: "0 5 * * *"
   workflow_dispatch: {}
 
 permissions:
@@ -48,7 +58,14 @@ jobs:
           ELEVENLABS_VOICE_ID: ${{ vars.ELEVENLABS_VOICE_ID }}
         run: dart run tool/generate_daily_audio.dart
 
+      # `if: always()` matters here: once quota runs out partway through a
+      # big batch, the previous step exits non-zero (some verses failed,
+      # not all), which would otherwise skip this step entirely — silently
+      # discarding whatever *did* generate successfully before quota ran
+      # out. Committing partial progress is exactly what lets the next
+      # scheduled run continue rather than redo work.
       - name: Publish docs/audio if anything changed
+        if: always()
         run: |
           if [ -n "$(git status --porcelain docs/audio)" ]; then
             git config user.name "github-actions[bot]"
