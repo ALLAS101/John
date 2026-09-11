@@ -3039,14 +3039,28 @@ class Verse {
     ),
   ];
 
-  /// Index into [dailyVerses] for [date] — the same day-of-year always
-  /// maps to the same index, in both the app and
-  /// `tool/generate_daily_audio.dart` (which imports this file directly
-  /// rather than re-implementing the mapping), so a client and the
-  /// pre-generated audio for "today" always agree on which verse that is.
+  /// The rotation's day 1 — deliberately fixed rather than "the start of
+  /// whatever year the app happens to run in", so index 0 (John 3:16)
+  /// lands on this exact date and every date is stable forever after,
+  /// independent of which year it's read in. Originally this was
+  /// day-of-year (so Jan 1 was always day 1, wherever "today" fell in the
+  /// 365-entry list); re-anchored here so the rotation instead starts from
+  /// the date the full year of content actually shipped — meaning today,
+  /// at the time of this change, is index 0, not wherever in the middle of
+  /// the list day-of-year happened to land.
+  static final DateTime _rotationAnchor = DateTime(2026, 9, 11);
+
+  /// Index into [dailyVerses] for [date] — the same calendar date always
+  /// maps to the same index (relative to [_rotationAnchor]), in both the
+  /// app and `tool/generate_daily_audio.dart` (which imports this file
+  /// directly rather than re-implementing the mapping), so a client and
+  /// the pre-generated audio for "today" always agree on which verse that
+  /// is. Dart's `%` on `int` always returns a non-negative result for a
+  /// positive divisor, so this wraps correctly for dates before the anchor
+  /// too, not just after it.
   static int indexForDate(DateTime date) {
-    final dayOfYear = date.difference(DateTime(date.year, 1, 1)).inDays;
-    return dayOfYear % dailyVerses.length;
+    final daysSinceAnchor = date.difference(_rotationAnchor).inDays;
+    return daysSinceAnchor % dailyVerses.length;
   }
 
   /// The verse for [date] — what Today (and the widgets) actually show.
