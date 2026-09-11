@@ -42,7 +42,12 @@ Future<void> main(List<String> args) async {
     exitCode = 1;
     return;
   }
-  final voiceId = Platform.environment['ELEVENLABS_VOICE_ID'];
+  // `?? ''` then treating '' as unset: the GitHub Actions workflow always
+  // sets this env var (from a repo *variable*, since a voice ID isn't a
+  // secret), but as an empty string when that variable itself isn't
+  // configured — not absent the way a truly-unset env var would be.
+  final rawVoiceId = Platform.environment['ELEVENLABS_VOICE_ID'] ?? '';
+  final voiceId = rawVoiceId.isEmpty ? null : rawVoiceId;
 
   final outDir = Directory('docs/audio');
   await outDir.create(recursive: true);

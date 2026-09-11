@@ -37,6 +37,15 @@ jobs:
       - name: Generate audio for any changed/new verses
         env:
           ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+          # Not a secret — a voice ID is public info, so this is a repo
+          # *variable* (Settings → Secrets and variables → Actions →
+          # Variables tab), not a secret. Optional: unset, this falls back
+          # to ElevenLabsCore.defaultVoiceId ("Rachel") — but free ElevenLabs
+          # accounts can't use most library/premade voice IDs via the API at
+          # all (a 402 "Free users cannot use library voices" error) unless
+          # that voice has been added to *your* account's "My Voices" first.
+          # See the README's "Shared daily audio" section for the fix.
+          ELEVENLABS_VOICE_ID: ${{ vars.ELEVENLABS_VOICE_ID }}
         run: dart run tool/generate_daily_audio.dart
 
       - name: Publish docs/audio if anything changed

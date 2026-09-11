@@ -123,11 +123,25 @@ order by `AppState.toggleVersePlayback()`:
    Generated audio is cached to disk (keyed by voice + exact text), so the
    same verse is only ever synthesized once *per device* — both to stay
    well within the free tier and so repeat plays are instant instead of
-   another network round trip. Optionally override the voice with
-   `ELEVENLABS_VOICE_ID` (same env mechanism) — defaults to "Rachel", one of
-   ElevenLabs' standard premade voices (must match whatever
-   `tool/generate_daily_audio.dart` used for tier 1's voice to sound
-   consistent, if you change it).
+   another network round trip.
+
+   **Free-tier accounts and the default voice**: this defaults to
+   "Rachel" — one of ElevenLabs' premade *library* voices — but ElevenLabs
+   no longer lets free accounts call the API with a library voice directly
+   (a `402 Free users cannot use library voices via the API` error). Fix:
+   in ElevenLabs, open **Voices → Voice Library**, find any voice you like,
+   and **Add to my voices** (this copies it into *your* account — free
+   accounts can use their own voices via the API, just not library ones
+   directly). Open **My Voices**, click that voice, and copy its **Voice
+   ID**. Then set `ELEVENLABS_VOICE_ID` to that value — as a
+   `--dart-define`/`env.json` entry for the app (tier 2; **only add the key
+   if you're giving it a real ID** — `env.example.json` deliberately leaves
+   it out, since an *empty-string* value would override the built-in
+   default with nothing rather than falling back to it, breaking every
+   request), and see the "Shared daily audio" section below for setting the
+   matching one for tier 1's generation script. Both need to point at a
+   voice your account actually has, or both will fail the same way and
+   silently fall through to the on-device voice.
 3. **On-device TTS** (`flutter_tts`) — the fallback, and the *only* tier on
    a build with neither of the above configured (the app works either
    way). Tuned for quality rather than just wired up:
@@ -208,16 +222,28 @@ from.
 
 **Status for this repo** (github.com/ALLAS101/John): pushed ✅, Pages
 enabled ✅ (serving at `https://allas101.github.io/John/`) — done as part of
-setting this up. Two steps are still yours to do, since they need your own
-credentials:
-1. Add your ElevenLabs API key as a repo secret: **Settings → Secrets and
-   variables → Actions → New repository secret**, name `ELEVENLABS_API_KEY`
+setting this up. Remaining steps need your own ElevenLabs account, so
+they're yours to do:
+1. Add your ElevenLabs API key as a repo **secret**: **Settings → Secrets
+   and variables → Actions → Secrets tab → New repository secret**, name
+   `ELEVENLABS_API_KEY`
    (github.com/ALLAS101/John/settings/secrets/actions).
-2. Generate the first files: either push any change to
+2. **If your ElevenLabs account is on the free tier** (true for most
+   accounts): the default voice ("Rachel", a library voice) doesn't work
+   via the API on free accounts — see the 402 error and fix in the "Verse
+   audio" section above (add a voice to **My Voices**, copy its **Voice
+   ID**). Then add that ID as a repo **variable** (not a secret — a voice ID
+   isn't sensitive): **Settings → Secrets and variables → Actions →
+   Variables tab → New repository variable**, name `ELEVENLABS_VOICE_ID`
+   (github.com/ALLAS101/John/settings/variables/actions). Skip this step
+   only if you're certain your account can call the API with a library
+   voice (a paid plan, or a voice you already own).
+3. Generate the first files: either push any change to
    `lib/models/verse.dart` (even whitespace), or go to the **Actions** tab →
    "Generate shared daily verse audio" → **Run workflow**
    (github.com/ALLAS101/John/actions). Check the run succeeded and
-   `docs/audio/verse-0.mp3` exists in the repo afterward.
+   `docs/audio/verse-0.mp3` exists in the repo afterward — if it failed,
+   open the run's log; a 402 there means step 2 above still needs doing.
 
 Then point the app at it — add to `env.json` (see above) or pass directly:
 ```
