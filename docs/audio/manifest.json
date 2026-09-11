@@ -1,0 +1,12 @@
+{
+  "generatedAt": "2026-09-11T12:02:46.893921Z",
+  "verses": [
+    {
+      "index": 0,
+      "reference": "John 3:16",
+      "translation": "King James Version",
+      "sha256": "6686dd6ba519b9554cd1fa8b9a23d513ba2d40ca668b42a3329f786d048002a7",
+      "file": "verse-0.mp3"
+    }
+  ]
+}
