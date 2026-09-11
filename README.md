@@ -206,26 +206,32 @@ from.
   `Verse.indexForDate` computes) and caches it on-device, same shape as
   `ElevenLabsService`.
 
-**One-time setup** (only needed once, by whoever owns this repo/ElevenLabs
-account):
-1. Push this repo to GitHub, if it isn't already.
-2. Add your ElevenLabs API key as a repo secret: **Settings → Secrets and
-   variables → Actions → New repository secret**, name `ELEVENLABS_API_KEY`.
-3. Enable Pages: **Settings → Pages → Build and deployment → Source: Deploy
-   from a branch → Branch: `master`, folder: `/docs` → Save** (or whatever
-   your default branch is named).
-4. Generate the first files: either push any change to
+**Status for this repo** (github.com/ALLAS101/John): pushed ✅, Pages
+enabled ✅ (serving at `https://allas101.github.io/John/`) — done as part of
+setting this up. Two steps are still yours to do, since they need your own
+credentials:
+1. Add your ElevenLabs API key as a repo secret: **Settings → Secrets and
+   variables → Actions → New repository secret**, name `ELEVENLABS_API_KEY`
+   (github.com/ALLAS101/John/settings/secrets/actions).
+2. Generate the first files: either push any change to
    `lib/models/verse.dart` (even whitespace), or go to the **Actions** tab →
-   "Generate shared daily verse audio" → **Run workflow**. Check the run
-   succeeded and `docs/audio/verse-0.mp3` exists in the repo afterward.
-5. Point the app at it — add to `env.json` (see above) or pass directly:
-   ```
-   flutter run --dart-define=DAILY_AUDIO_BASE_URL=https://<your-username>.github.io/<repo>/audio
-   ```
+   "Generate shared daily verse audio" → **Run workflow**
+   (github.com/ALLAS101/John/actions). Check the run succeeded and
+   `docs/audio/verse-0.mp3` exists in the repo afterward.
+
+Then point the app at it — add to `env.json` (see above) or pass directly:
+```
+flutter run --dart-define=DAILY_AUDIO_BASE_URL=https://allas101.github.io/John/audio
+```
 
 With no `DAILY_AUDIO_BASE_URL` configured, tier 1 is skipped entirely and
-the app behaves exactly as before (tier 2 or tier 3) — nothing breaks if
-you skip this setup.
+the app behaves exactly as before (tier 2 or tier 3) — nothing breaks
+before you do the two steps above, either.
+
+*(For a different repo/owner, the general steps are: push to GitHub, add
+the secret, enable Pages under Settings → Pages → Deploy from a branch →
+your default branch, folder `/docs`, then use
+`https://<owner>.github.io/<repo>/audio` as the base URL.)*
 
 **Home-screen widgets**: real native widgets, not just the in-app
 Widget-tab preview, via the `home_widget` package.
