@@ -70,6 +70,7 @@ class TodayScreen extends StatelessWidget {
                 ),
                 const SizedBox(height: 26),
                 _ReflectionBlock(
+                  prompt: state.verseOfDay.reflectionPrompt,
                   onWriteAboutThis: (prompt) =>
                       state.openJournalWithPrompt(prompt),
                 ),
@@ -151,12 +152,13 @@ class _VerseCard extends StatelessWidget {
 }
 
 class _ReflectionBlock extends StatelessWidget {
-  const _ReflectionBlock({required this.onWriteAboutThis});
+  const _ReflectionBlock({required this.prompt, required this.onWriteAboutThis});
 
+  /// Today's verse's own [Verse.reflectionPrompt] — this block no longer
+  /// carries a fixed prompt of its own, since a generic question stopped
+  /// matching once the rotation grew past a single verse.
+  final String prompt;
   final ValueChanged<String> onWriteAboutThis;
-
-  static const _prompt =
-      'Where did you see love given away today — not earned, just given?';
 
   @override
   Widget build(BuildContext context) {
@@ -170,7 +172,7 @@ class _ReflectionBlock extends StatelessWidget {
         ),
         const SizedBox(height: 10),
         Text(
-          _prompt,
+          prompt,
           style: AppText.body(
             height: 1.6,
             color: p.warmBase.withValues(alpha: 0.72),
@@ -178,7 +180,7 @@ class _ReflectionBlock extends StatelessWidget {
         ),
         const SizedBox(height: 6),
         GestureDetector(
-          onTap: () => onWriteAboutThis(_prompt),
+          onTap: () => onWriteAboutThis(prompt),
           child: Row(
             mainAxisSize: MainAxisSize.min,
             children: [

@@ -8,6 +8,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'package:john316/models/app_tab.dart';
+import 'package:john316/models/verse.dart';
 import 'package:john316/services/home_widget_service.dart';
 import 'package:john316/state/app_state.dart';
 
@@ -52,12 +53,15 @@ void main() {
         (call.arguments as Map)['id'] as String: (call.arguments as Map)['data'],
     };
 
-    expect(
-      saved['widget_verse_large'],
-      'For God so loved the world, that he gave his only begotten Son…',
-    );
-    expect(saved['widget_verse_small'], 'God so loved the world…');
-    expect(saved['widget_footer_left'], 'John 3:16 · KJV');
+    // Derived from whatever verse the rotation actually lands on today,
+    // rather than hardcoding entry 0's text — the rotation has grown past a
+    // single verse, so "today" won't always be John 3:16.
+    final todaysVerse = Verse.forDate(DateTime.now());
+    expect(saved['widget_verse_large'], todaysVerse.widgetExcerptLarge);
+    expect(saved['widget_verse_small'], todaysVerse.widgetExcerptSmall);
+    // Every entry uses "King James Version", so the abbreviated suffix is
+    // stable even though the reference itself varies by day.
+    expect(saved['widget_footer_left'], '${todaysVerse.reference} · KJV');
     expect(saved['widget_streak_label'], '12-day streak');
 
     final updated = calls
