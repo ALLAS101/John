@@ -35,7 +35,16 @@ class ElevenLabsCore {
   /// voice when a call site doesn't specify one.
   static const defaultVoiceId = '21m00Tcm4TlvDq8ikWAM';
 
-  static const _modelId = 'eleven_multilingual_v2';
+  // "Flash v2.5" — half the per-character credit cost of
+  // eleven_multilingual_v2 (ElevenLabs docs: 50% lower price per character),
+  // and their docs describe it as functionally equivalent in quality to the
+  // now-deprecated Turbo v2.5 tier. Free-tier quota only covers a fraction
+  // of a year's worth of daily verses at the old model's rate (see
+  // generate-daily-audio.yml's doc comment) — this roughly doubles how far
+  // it goes. Verses already generated under the old model are unaffected
+  // (not worth spending quota to redo them just for consistency); only new
+  // generations from here on use this one.
+  static const _modelId = 'eleven_flash_v2_5';
 
   /// Test-only override of the `http.Client` used when a call site doesn't
   /// pass one explicitly (production call sites never do — this exists
