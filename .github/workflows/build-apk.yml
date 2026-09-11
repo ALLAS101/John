@@ -1,0 +1,44 @@
+name: Build Android APK
+
+# Manual-only: this repo's actual Flutter/Gradle build never runs locally
+# (the dev sandbox this app was built in can't run Gradle at all — a
+# confirmed, undebuggable environment limitation), so this is the only
+# place the Android build has ever actually been compiled. GitHub's own
+# runners ship a working Android SDK + JDK, so this just runs the normal
+# `flutter build apk` anyone would run locally, and uploads the result so
+# it can be downloaded and installed directly (sideloaded) on a device.
+#
+# The release build type is signed with the debug keystore (see
+# android/app/build.gradle.kts — "so `flutter run --release` works"),
+# which is why this produces an installable APK with no real signing
+# setup: fine for testing on your own device, not for a Play Store
+# listing (that needs a real upload key, a separate step).
+on:
+  workflow_dispatch: {}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+
+      - run: flutter pub get
+
+      # DAILY_AUDIO_BASE_URL only — never bake ELEVENLABS_API_KEY into a
+      # distributed APK. Anyone could pull it back out of the binary and
+      # spend your ElevenLabs quota; the shared-audio tier (this URL)
+      # exists specifically so end users never need a personal key at all.
+      - name: Build release APK
+        run: >
+          flutter build apk --release
+          --dart-define=DAILY_AUDIO_BASE_URL=https://allas101.github.io/John/audio
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: john316-release-apk
+          path: build/app/outputs/flutter-apk/app-release.apk
+          retention-days: 30
