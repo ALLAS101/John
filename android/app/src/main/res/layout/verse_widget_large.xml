@@ -20,10 +20,17 @@
         android:orientation="horizontal"
         android:gravity="center_vertical">
 
-        <View
+        <!-- Plain <View> isn't in RemoteViews' supported-widget whitelist
+             (only specific classes like TextView/ImageView/LinearLayout are
+             allowed) — the launcher's cross-process RemoteViews.apply()
+             throws trying to inflate an unsupported class, which is what
+             actually produced Android's "Couldn't add widget" error.
+             ImageView is supported and renders the same shape drawable
+             identically via android:src. -->
+        <ImageView
             android:layout_width="14dp"
             android:layout_height="14dp"
-            android:background="@drawable/widget_chip_dot" />
+            android:src="@drawable/widget_chip_dot" />
 
         <TextView
             android:id="@+id/widget_eyebrow"
