@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-11T12:15:54.743554Z",
+  "generatedAt": "2026-11-12T13:23:44.404062Z",
   "verses": [
     {
       "index": 0,
@@ -1332,6 +1332,13 @@
       "file": "verse-189.mp3"
     },
     {
+      "index": 190,
+      "reference": "Genesis 12:2-3",
+      "translation": "King James Version",
+      "sha256": "70edfcc4c0a0c33977b6fc23d59b10ab9b6255cb243d893a94c1dc124797f136",
+      "file": "verse-190.mp3"
+    },
+    {
       "index": 191,
       "reference": "James 4:7",
       "translation": "King James Version",
@@ -1344,6 +1351,853 @@
       "translation": "King James Version",
       "sha256": "a4f2eab1e297625a362c7a2a06d8c4e990085a1a78f34c94a6741ce4f2522735",
       "file": "verse-192.mp3"
+    },
+    {
+      "index": 193,
+      "reference": "Zechariah 4:6",
+      "translation": "King James Version",
+      "sha256": "26dee44c99666401c454c46aaa6482ee26d8cd5c3430f1f008160a88fe987619",
+      "file": "verse-193.mp3"
+    },
+    {
+      "index": 194,
+      "reference": "1 Peter 3:15",
+      "translation": "King James Version",
+      "sha256": "b609345c47fe80a54cdeda74a16bc9f1cd794fbee8ab8fc3df8ce1a9b86b0031",
+      "file": "verse-194.mp3"
+    },
+    {
+      "index": 195,
+      "reference": "Acts 3:19",
+      "translation": "King James Version",
+      "sha256": "e76d744c346b63fbd2a6f24fccd10c797ec73affdc7483b02465bbe0c78be8a3",
+      "file": "verse-195.mp3"
+    },
+    {
+      "index": 196,
+      "reference": "James 1:2-3",
+      "translation": "King James Version",
+      "sha256": "eae76f7f16dc501629f2755366c35f67992432297284a10b1fca7b6766f1c001",
+      "file": "verse-196.mp3"
+    },
+    {
+      "index": 197,
+      "reference": "2 Chronicles 16:9",
+      "translation": "King James Version",
+      "sha256": "6d480c6476e806b329452a0a8ad099cd9f6fc960cf037b46579e86da9c367fd1",
+      "file": "verse-197.mp3"
+    },
+    {
+      "index": 198,
+      "reference": "Proverbs 11:25",
+      "translation": "King James Version",
+      "sha256": "46bcda50768591f4b7c4d920004e6842471188362fe3946bcec7e61db76e95b5",
+      "file": "verse-198.mp3"
+    },
+    {
+      "index": 199,
+      "reference": "Hebrews 4:16",
+      "translation": "King James Version",
+      "sha256": "b8074ef64e85cff5c0c68cc54c95f383de9f52b5abb829e32d37de3d90b0e5c5",
+      "file": "verse-199.mp3"
+    },
+    {
+      "index": 200,
+      "reference": "Job 42:2",
+      "translation": "King James Version",
+      "sha256": "133da21faacc1bd28294351ee07697d0a093a3ed2e99ab878a042a723e546802",
+      "file": "verse-200.mp3"
+    },
+    {
+      "index": 201,
+      "reference": "Malachi 4:2",
+      "translation": "King James Version",
+      "sha256": "3c81831946651ebaf4601d2d1466402272c0a447a551080b75253e79337e548f",
+      "file": "verse-201.mp3"
+    },
+    {
+      "index": 202,
+      "reference": "Luke 6:31",
+      "translation": "King James Version",
+      "sha256": "0b74ab9ba83690a7c1bf0d90a990958c629eac68c6904d1522b051079e115523",
+      "file": "verse-202.mp3"
+    },
+    {
+      "index": 203,
+      "reference": "Matthew 7:12",
+      "translation": "King James Version",
+      "sha256": "749ca32d074efea6f5c2bc781843e27e78020697056a1a470886105b1b14e1c3",
+      "file": "verse-203.mp3"
+    },
+    {
+      "index": 204,
+      "reference": "Psalm 86:5",
+      "translation": "King James Version",
+      "sha256": "328f021a1900bf551192539de4a45b1eb12b8c1176ffe0531a3df220fcd6a4fb",
+      "file": "verse-204.mp3"
+    },
+    {
+      "index": 205,
+      "reference": "Romans 8:18",
+      "translation": "King James Version",
+      "sha256": "a241e264c8d3f83ad80e1fe38e2bae672fb6a2bf4f186f67766bd6b9da003ee3",
+      "file": "verse-205.mp3"
+    },
+    {
+      "index": 206,
+      "reference": "Judges 21:25",
+      "translation": "King James Version",
+      "sha256": "285db9d5ce433988cd2bcc4cab5fe7a058967dbe768ef36be2183218048b0f5e",
+      "file": "verse-206.mp3"
+    },
+    {
+      "index": 207,
+      "reference": "Isaiah 53:5",
+      "translation": "King James Version",
+      "sha256": "00c47874f0c861879e1eb3d07c2686a48b885ce85d631f0333a9af6df61adf1e",
+      "file": "verse-207.mp3"
+    },
+    {
+      "index": 208,
+      "reference": "Nehemiah 6:9",
+      "translation": "King James Version",
+      "sha256": "7dfcbd29af9f7d088bde0297ed5d02a011ab95c22ea4797b4f93cb460d35fa29",
+      "file": "verse-208.mp3"
+    },
+    {
+      "index": 209,
+      "reference": "Isaiah 46:4",
+      "translation": "King James Version",
+      "sha256": "146f19485ab8d2ac004d76ba560ed533e0ac70e257588a3ec91b83f8dd73ed95",
+      "file": "verse-209.mp3"
+    },
+    {
+      "index": 210,
+      "reference": "2 Corinthians 12:9",
+      "translation": "King James Version",
+      "sha256": "82b55b01f560a3b0f40543d35e70832391a214ab99c5120a8d9c78b83a96f186",
+      "file": "verse-210.mp3"
+    },
+    {
+      "index": 211,
+      "reference": "Genesis 1:1",
+      "translation": "King James Version",
+      "sha256": "bb8a6ea806b767d0f7565896fec08284f37a395358dfcc09a912bba21745ebe9",
+      "file": "verse-211.mp3"
+    },
+    {
+      "index": 212,
+      "reference": "Matthew 22:37",
+      "translation": "King James Version",
+      "sha256": "aa63eb143d85193f5d85e0fe42f5337ffab2457853cf6330648cee9f2d8022a2",
+      "file": "verse-212.mp3"
+    },
+    {
+      "index": 213,
+      "reference": "Romans 8:1",
+      "translation": "King James Version",
+      "sha256": "0b404bef9f98628a8837b76f07bfa98e977500a83983093109fdf3d41ff7f044",
+      "file": "verse-213.mp3"
+    },
+    {
+      "index": 214,
+      "reference": "Acts 1:8",
+      "translation": "King James Version",
+      "sha256": "e6e6f3eeee52f48ba00c94495c6e0e4a3ac51b19253030f2ae3a39972edd872e",
+      "file": "verse-214.mp3"
+    },
+    {
+      "index": 215,
+      "reference": "Psalm 84:11",
+      "translation": "King James Version",
+      "sha256": "28249cc244c91f0af3c273285972a45a5e53392e820eb736f72f2df0a007e763",
+      "file": "verse-215.mp3"
+    },
+    {
+      "index": 216,
+      "reference": "Romans 8:38-39",
+      "translation": "King James Version",
+      "sha256": "1014991fa4a45f229d360534ab3d095d5c3850bbc8150c726fa86a6334f06a12",
+      "file": "verse-216.mp3"
+    },
+    {
+      "index": 217,
+      "reference": "James 4:8",
+      "translation": "King James Version",
+      "sha256": "b4436b16ff176da39018e56731dc54ee8409f9d0c0777866ec21cfc37f19993d",
+      "file": "verse-217.mp3"
+    },
+    {
+      "index": 218,
+      "reference": "Job 19:25",
+      "translation": "King James Version",
+      "sha256": "2b4728f7c79a831f9641c2b9d01c834b8e85eb71c445d4313ff4c5791ea2de98",
+      "file": "verse-218.mp3"
+    },
+    {
+      "index": 219,
+      "reference": "2 Timothy 3:16-17",
+      "translation": "King James Version",
+      "sha256": "87d6309823cec584b14d8d25ba0c41be690e18e55d5003c1f3bad9e11a1f22c5",
+      "file": "verse-219.mp3"
+    },
+    {
+      "index": 220,
+      "reference": "James 1:17",
+      "translation": "King James Version",
+      "sha256": "61905c99f994401a6d31a701f1b2680811876156556b20b22a1a26f5605dbeb3",
+      "file": "verse-220.mp3"
+    },
+    {
+      "index": 221,
+      "reference": "John 1:12",
+      "translation": "King James Version",
+      "sha256": "407700baac402e3007eeb0f3f5b948c1ae4cbccfc405e08bf1742558dd557be5",
+      "file": "verse-221.mp3"
+    },
+    {
+      "index": 222,
+      "reference": "Ruth 2:12",
+      "translation": "King James Version",
+      "sha256": "abb55cfeeb941e7fe94d16e6b008aa9e91c4e580a25e0610f76001b7c63502fa",
+      "file": "verse-222.mp3"
+    },
+    {
+      "index": 223,
+      "reference": "James 1:5",
+      "translation": "King James Version",
+      "sha256": "ba99958078cfc67bc9770ac7c8937cad2ea0117562a6972724179249223ff0dd",
+      "file": "verse-223.mp3"
+    },
+    {
+      "index": 224,
+      "reference": "Philemon 1:7",
+      "translation": "King James Version",
+      "sha256": "98979bca7153f4a062764e873e36c9301d13f71cff43fbde5471a8643ab66e69",
+      "file": "verse-224.mp3"
+    },
+    {
+      "index": 225,
+      "reference": "Genesis 2:18",
+      "translation": "King James Version",
+      "sha256": "e46a9c85f238086000a2817c2fbf21706441481a24e7d8fca92598253359971c",
+      "file": "verse-225.mp3"
+    },
+    {
+      "index": 226,
+      "reference": "Daniel 6:10",
+      "translation": "King James Version",
+      "sha256": "6e9baa62eb047e133b8fbbbe370bde56bf7204e0f881221e434fdc5957b4aae3",
+      "file": "verse-226.mp3"
+    },
+    {
+      "index": 227,
+      "reference": "Psalm 40:1-2",
+      "translation": "King James Version",
+      "sha256": "34202c46c753fafbf625b67f11d4df0b92a69c726f7d39b5f638fbdf0769ac81",
+      "file": "verse-227.mp3"
+    },
+    {
+      "index": 228,
+      "reference": "Romans 3:23",
+      "translation": "King James Version",
+      "sha256": "c76cae8c28892ce14f8c6b2a9936745a8d8c20f186ef5229ac9faefb0d9d390f",
+      "file": "verse-228.mp3"
+    },
+    {
+      "index": 229,
+      "reference": "2 John 1:6",
+      "translation": "King James Version",
+      "sha256": "6276c90e1128b003ce1435d17b485fe6386f53eb3f71a27bcc00c8f81496972c",
+      "file": "verse-229.mp3"
+    },
+    {
+      "index": 230,
+      "reference": "Psalm 30:5",
+      "translation": "King James Version",
+      "sha256": "302c35ce28ee93011b2636638a6e742df99a76905c503725738578b04fe09d46",
+      "file": "verse-230.mp3"
+    },
+    {
+      "index": 231,
+      "reference": "Proverbs 13:20",
+      "translation": "King James Version",
+      "sha256": "1af013b51f786ae49cc2a8dcb4adfdb3bb0076382fd0d6a993c0b9deba6f993e",
+      "file": "verse-231.mp3"
+    },
+    {
+      "index": 232,
+      "reference": "Deuteronomy 6:5",
+      "translation": "King James Version",
+      "sha256": "58d7403a9375e1d2ad1b7b46a47ab12a251323e250a9c0569003b94a8aaea424",
+      "file": "verse-232.mp3"
+    },
+    {
+      "index": 233,
+      "reference": "2 Timothy 2:15",
+      "translation": "King James Version",
+      "sha256": "4a9b9a6b029df060c1a4b5589bbc11032df248a992c96b63966e61ad035246d6",
+      "file": "verse-233.mp3"
+    },
+    {
+      "index": 234,
+      "reference": "Habakkuk 2:4",
+      "translation": "King James Version",
+      "sha256": "ec1727ba4e79a035e2f3c1b44041dc8e79eca58aec4c4e14ef883c0e8d1e9400",
+      "file": "verse-234.mp3"
+    },
+    {
+      "index": 235,
+      "reference": "Proverbs 29:18",
+      "translation": "King James Version",
+      "sha256": "bbc75d7dd64f6d879b8b97fec74c8ccb79f0b0933664b1cd3cd7ff68bb0ae3ff",
+      "file": "verse-235.mp3"
+    },
+    {
+      "index": 236,
+      "reference": "Isaiah 9:6",
+      "translation": "King James Version",
+      "sha256": "b67c7e134a0c4f09ead2472adbf8e8c12d74d23fc6aae3d057099ba16f464ea8",
+      "file": "verse-236.mp3"
+    },
+    {
+      "index": 237,
+      "reference": "Acts 20:35",
+      "translation": "King James Version",
+      "sha256": "458b36fff96eaa14ff2017d628200f69b50cc60787ee9dee12d542cffa811928",
+      "file": "verse-237.mp3"
+    },
+    {
+      "index": 238,
+      "reference": "3 John 1:2",
+      "translation": "King James Version",
+      "sha256": "a77b6f4e9066c9aee5188ea3b402c5c260ce7b86916c934d61aecef4f8635ede",
+      "file": "verse-238.mp3"
+    },
+    {
+      "index": 239,
+      "reference": "Matthew 5:44",
+      "translation": "King James Version",
+      "sha256": "4367277529a1e3c117ff352a85cc0419aa1be1799e402bd328240ecb3c0f6eea",
+      "file": "verse-239.mp3"
+    },
+    {
+      "index": 240,
+      "reference": "1 Chronicles 29:11",
+      "translation": "King James Version",
+      "sha256": "4bb4e0f6a20c62ad8cfd95fd32d6fa8961ac6cf86bf4d31079f2b20ac29b0a6c",
+      "file": "verse-240.mp3"
+    },
+    {
+      "index": 241,
+      "reference": "Hebrews 10:24",
+      "translation": "King James Version",
+      "sha256": "b7925825d74e6297b24d1cef0c02e830ce78c9c7fb3584cb5444f4505cf0b3b4",
+      "file": "verse-241.mp3"
+    },
+    {
+      "index": 242,
+      "reference": "2 Peter 3:9",
+      "translation": "King James Version",
+      "sha256": "476c4c2dae279dfae68086148a50b1d326fd12ecc6dbfe907130397f055b42f5",
+      "file": "verse-242.mp3"
+    },
+    {
+      "index": 243,
+      "reference": "Matthew 28:20",
+      "translation": "King James Version",
+      "sha256": "768166c2e0af9c0f42f6c9c62792731aac7a0f1e0e267593a0e83555582ae231",
+      "file": "verse-243.mp3"
+    },
+    {
+      "index": 244,
+      "reference": "Revelation 3:20",
+      "translation": "King James Version",
+      "sha256": "a1ba4b3ed974a799dc22cab09e06ca55d9a7f916a99476564b89ad0ca121149c",
+      "file": "verse-244.mp3"
+    },
+    {
+      "index": 245,
+      "reference": "Isaiah 43:2",
+      "translation": "King James Version",
+      "sha256": "6a7d2b90f8722322b5afb1dbe515aa050c650ab6f645fcee4f58f6dc8799af04",
+      "file": "verse-245.mp3"
+    },
+    {
+      "index": 246,
+      "reference": "Psalm 8:3-4",
+      "translation": "King James Version",
+      "sha256": "a3ec83350cd0a20c66e61d7ab39dae95bae32fbfdaa1bd2b837ed11a91db6c40",
+      "file": "verse-246.mp3"
+    },
+    {
+      "index": 247,
+      "reference": "Ephesians 4:32",
+      "translation": "King James Version",
+      "sha256": "fc554c3117d567138295944f8383edfee72e234f5701ba4a7fd076741796a415",
+      "file": "verse-247.mp3"
+    },
+    {
+      "index": 248,
+      "reference": "Isaiah 55:8-9",
+      "translation": "King James Version",
+      "sha256": "eac76795925eb6019f89cec2ddd95f525f1c900eee006de0af298e8f8c29ea05",
+      "file": "verse-248.mp3"
+    },
+    {
+      "index": 249,
+      "reference": "Psalm 145:18",
+      "translation": "King James Version",
+      "sha256": "072a5a8f3dd9b87a95dc6e9cfbc3dc5a12ce913ea226587aa2d84e8b2c163ccf",
+      "file": "verse-249.mp3"
+    },
+    {
+      "index": 250,
+      "reference": "2 Timothy 4:7",
+      "translation": "King James Version",
+      "sha256": "0ef4f14390be0ac56225693e89662545b80e283a813116e6abfa08def97fdb95",
+      "file": "verse-250.mp3"
+    },
+    {
+      "index": 251,
+      "reference": "2 Corinthians 5:7",
+      "translation": "King James Version",
+      "sha256": "9b35dc96354dd1b7e732526ae033d2a1c725952b1168b21809d53ce1a4bb37d4",
+      "file": "verse-251.mp3"
+    },
+    {
+      "index": 252,
+      "reference": "Proverbs 31:25",
+      "translation": "King James Version",
+      "sha256": "6a17365bd954b3862e06f2c406da381ac07105eef86f3753cb341075814c508c",
+      "file": "verse-252.mp3"
+    },
+    {
+      "index": 253,
+      "reference": "Micah 6:8",
+      "translation": "King James Version",
+      "sha256": "3f9baa6f5742aaf1e74795a1e39f0e5e0a5c2cabcf32f6ccb260921d1dc0aae4",
+      "file": "verse-253.mp3"
+    },
+    {
+      "index": 254,
+      "reference": "John 11:25",
+      "translation": "King James Version",
+      "sha256": "90c74ad3ec3c278917c8dc9d3468dc42d305b1d8786c6e7c7a723c47093257a3",
+      "file": "verse-254.mp3"
+    },
+    {
+      "index": 255,
+      "reference": "Ephesians 6:10",
+      "translation": "King James Version",
+      "sha256": "c2357f352fa4016b46bd1c933b9a1a77e72ac1fd3f2eafd5d8eb9e8268ec659e",
+      "file": "verse-255.mp3"
+    },
+    {
+      "index": 256,
+      "reference": "Jeremiah 29:13",
+      "translation": "King James Version",
+      "sha256": "e5e1e1731595c5386bba12d0415507346aabe3344d1b45bfde1973887c4a99e1",
+      "file": "verse-256.mp3"
+    },
+    {
+      "index": 257,
+      "reference": "Hosea 6:3",
+      "translation": "King James Version",
+      "sha256": "5a8773e77b1b7edf8a9ebbd38b30ee3e1acc10ceed4daadcf37133f67b6d56de",
+      "file": "verse-257.mp3"
+    },
+    {
+      "index": 258,
+      "reference": "John 10:27-28",
+      "translation": "King James Version",
+      "sha256": "74c4c3fd188f32fe2e5b30c81fa921f9180d2c0ff1e8622b617e34665800dcc9",
+      "file": "verse-258.mp3"
+    },
+    {
+      "index": 259,
+      "reference": "2 Samuel 22:31",
+      "translation": "King James Version",
+      "sha256": "a26adef100031a0a8e2ac3ef75335a23fefa77d61f10c4a68550c3fc21ad96e4",
+      "file": "verse-259.mp3"
+    },
+    {
+      "index": 260,
+      "reference": "Revelation 21:5",
+      "translation": "King James Version",
+      "sha256": "0b4a8ecc74d3e644d6ccc4f71f1c50d753e9e6ddead0f34ff3dc17399182ab1f",
+      "file": "verse-260.mp3"
+    },
+    {
+      "index": 261,
+      "reference": "Psalm 51:10",
+      "translation": "King James Version",
+      "sha256": "5d7ad35692b1ff3e4e01b6ee42bc4851e4bebfc07da904880736389ba8d48919",
+      "file": "verse-261.mp3"
+    },
+    {
+      "index": 262,
+      "reference": "James 5:16",
+      "translation": "King James Version",
+      "sha256": "b8b219ad9fae5793180bdd976029d6b8dc42bc1e13b1ea63c4d773588ab7dd05",
+      "file": "verse-262.mp3"
+    },
+    {
+      "index": 263,
+      "reference": "Hebrews 6:19",
+      "translation": "King James Version",
+      "sha256": "16cffd54dda9a576b7f6f72a852e9d40ff793394426ad6935afbbfa59ffcc090",
+      "file": "verse-263.mp3"
+    },
+    {
+      "index": 264,
+      "reference": "Matthew 9:37",
+      "translation": "King James Version",
+      "sha256": "db20ab76086608896d797b61f8319fb135f46efb6f8e5fa79d4a640dbae05fb5",
+      "file": "verse-264.mp3"
+    },
+    {
+      "index": 265,
+      "reference": "Philippians 2:3-4",
+      "translation": "King James Version",
+      "sha256": "dee8b4df1d56e76d80000ef10ba12f693549f76ccc10c05f0ce487b994133553",
+      "file": "verse-265.mp3"
+    },
+    {
+      "index": 266,
+      "reference": "Galatians 2:20",
+      "translation": "King James Version",
+      "sha256": "63d8d62106708e43187b2e4693778c2976d22f91d0c445172b570ce656540870",
+      "file": "verse-266.mp3"
+    },
+    {
+      "index": 267,
+      "reference": "Matthew 25:21",
+      "translation": "King James Version",
+      "sha256": "7b6255e542f05216d42c79d89087103e7a9b0a70dd3a8cb85c019b5171aaab5a",
+      "file": "verse-267.mp3"
+    },
+    {
+      "index": 268,
+      "reference": "Isaiah 43:18-19",
+      "translation": "King James Version",
+      "sha256": "f312e7e4f31df6ef02ee51b2f041e3036527f8e216e5e6360008fb608a7ce4cb",
+      "file": "verse-268.mp3"
+    },
+    {
+      "index": 269,
+      "reference": "Matthew 19:26",
+      "translation": "King James Version",
+      "sha256": "8a53c09a7c8f8eb61244fae832581d85684777b9a45268f3a92b52e4e1be5cee",
+      "file": "verse-269.mp3"
+    },
+    {
+      "index": 270,
+      "reference": "2 Timothy 1:7",
+      "translation": "King James Version",
+      "sha256": "6a611e8c4c673f37ad5c72dad26b9bfcfc29d12ff5a2ad1845aa644e142e582e",
+      "file": "verse-270.mp3"
+    },
+    {
+      "index": 271,
+      "reference": "Titus 3:5",
+      "translation": "King James Version",
+      "sha256": "30677835eae16d20c29cddd9693c91b511e5fd7521476dc6f7c7d1fb132b3964",
+      "file": "verse-271.mp3"
+    },
+    {
+      "index": 272,
+      "reference": "Psalm 94:19",
+      "translation": "King James Version",
+      "sha256": "62e88972fd7e1539e957fda115cecb8dce0728c599f85956562568a0a384a9b5",
+      "file": "verse-272.mp3"
+    },
+    {
+      "index": 273,
+      "reference": "2 Corinthians 9:8",
+      "translation": "King James Version",
+      "sha256": "895374b93ebd836512bfdd530e2dba217e2095f0b6af1851cfcf3fcf4214e2d4",
+      "file": "verse-273.mp3"
+    },
+    {
+      "index": 274,
+      "reference": "Joel 2:25",
+      "translation": "King James Version",
+      "sha256": "665c86c264d46da73ba2aa0cbab42b761cc9f6c46bd3b70f3b3c05a50b35ad13",
+      "file": "verse-274.mp3"
+    },
+    {
+      "index": 275,
+      "reference": "Colossians 3:23",
+      "translation": "King James Version",
+      "sha256": "3f2d7986e568c36bcb073419986151304a39484c2fda0ef909ac9fd2af0b7210",
+      "file": "verse-275.mp3"
+    },
+    {
+      "index": 276,
+      "reference": "Philippians 1:6",
+      "translation": "King James Version",
+      "sha256": "9ccd60ef7f799c634319878466dd1afd62aa5084a2cb4748581ef2d48a918e85",
+      "file": "verse-276.mp3"
+    },
+    {
+      "index": 277,
+      "reference": "Psalm 4:8",
+      "translation": "King James Version",
+      "sha256": "fb273943262dfe3175e19858282ea3e62de357bf9a5ee10b4fbe0f05aac2f2e5",
+      "file": "verse-277.mp3"
+    },
+    {
+      "index": 278,
+      "reference": "Romans 12:21",
+      "translation": "King James Version",
+      "sha256": "f2fb1869dfa1891161af907a01f54acf600e7fbab480a4f489b3f3d21bd19923",
+      "file": "verse-278.mp3"
+    },
+    {
+      "index": 279,
+      "reference": "Psalm 55:22",
+      "translation": "King James Version",
+      "sha256": "024715741e41905bc896e5207c9acfaa72de1236d3381771e9c9f5d976ea8b40",
+      "file": "verse-279.mp3"
+    },
+    {
+      "index": 280,
+      "reference": "Proverbs 17:17",
+      "translation": "King James Version",
+      "sha256": "6ac834986aba82150502197ff35f3127bc3b96630b4a3b319ac8df45ba8b1a3e",
+      "file": "verse-280.mp3"
+    },
+    {
+      "index": 281,
+      "reference": "Psalm 112:1",
+      "translation": "King James Version",
+      "sha256": "fb8b51ff5e8219f97e1fd0f7fa49f9b590cc76dd0e3baa1e724a8d25e8772ca8",
+      "file": "verse-281.mp3"
+    },
+    {
+      "index": 282,
+      "reference": "Romans 5:8",
+      "translation": "King James Version",
+      "sha256": "936f331768df8756635cc2bf80e93364db58de0fa013b3ee460cefcb323d390e",
+      "file": "verse-282.mp3"
+    },
+    {
+      "index": 283,
+      "reference": "Exodus 3:14",
+      "translation": "King James Version",
+      "sha256": "9ca1d40bef8eab737e4e01e02fe6c5bdbcb0576fe8350660fd7dcc8dda623b70",
+      "file": "verse-283.mp3"
+    },
+    {
+      "index": 284,
+      "reference": "Romans 8:31",
+      "translation": "King James Version",
+      "sha256": "4c5d2de60b3ac5c7680710fa808160d0f59b0840f835633de40c5642e226a7c3",
+      "file": "verse-284.mp3"
+    },
+    {
+      "index": 285,
+      "reference": "Ecclesiastes 11:1",
+      "translation": "King James Version",
+      "sha256": "8d95326c2d3d9b2c99e563a154aa4c4e2de74d5878829b3c97ecaa9dd2fdfaf4",
+      "file": "verse-285.mp3"
+    },
+    {
+      "index": 286,
+      "reference": "Ruth 1:16",
+      "translation": "King James Version",
+      "sha256": "92012e43be37f0408a3f1137f0f07d47194f774917acca8a0032630a9dc8167f",
+      "file": "verse-286.mp3"
+    },
+    {
+      "index": 287,
+      "reference": "Matthew 18:20",
+      "translation": "King James Version",
+      "sha256": "5c96490e798d7eb7a7af5b2ad20c777b7c79a10be78e765e2694cf1281195762",
+      "file": "verse-287.mp3"
+    },
+    {
+      "index": 288,
+      "reference": "Zephaniah 3:17",
+      "translation": "King James Version",
+      "sha256": "16dcf812a38b3804bd7edcb9e15ad6f8f6ffac4ba2f5c2f2fa0029a305fd7c31",
+      "file": "verse-288.mp3"
+    },
+    {
+      "index": 289,
+      "reference": "Ezekiel 11:19",
+      "translation": "King James Version",
+      "sha256": "819df5237817f6a3ea8df3b1d4d49705c7a1b0c44af18ad0a85c66ea643fcadd",
+      "file": "verse-289.mp3"
+    },
+    {
+      "index": 290,
+      "reference": "Job 13:15",
+      "translation": "King James Version",
+      "sha256": "05b877f774ac6939afc07f704da9fffc50606f05a1db5e397d47fca93dea7bf9",
+      "file": "verse-290.mp3"
+    },
+    {
+      "index": 291,
+      "reference": "Philippians 4:8",
+      "translation": "King James Version",
+      "sha256": "8f9985eba4b5f6d8136b61dbadd47aa4cce2e0cfd5c10da345a95012f8b54237",
+      "file": "verse-291.mp3"
+    },
+    {
+      "index": 292,
+      "reference": "1 Peter 5:7",
+      "translation": "King James Version",
+      "sha256": "6109c1fd53ba25c0e96e002277056cadc588571cb060652f611af4e9b5933407",
+      "file": "verse-292.mp3"
+    },
+    {
+      "index": 293,
+      "reference": "Hebrews 12:1",
+      "translation": "King James Version",
+      "sha256": "0fbc364ecf59add2a2ccf5ac2d7c9eb8e51db395d4e9421a1797e20321a6faf7",
+      "file": "verse-293.mp3"
+    },
+    {
+      "index": 294,
+      "reference": "Psalm 133:1",
+      "translation": "King James Version",
+      "sha256": "97c521ea535868c680f477a84f1f5a770c760ecdb305ac6c5fb3203a270af1ef",
+      "file": "verse-294.mp3"
+    },
+    {
+      "index": 295,
+      "reference": "2 Kings 6:16",
+      "translation": "King James Version",
+      "sha256": "bfe10f462caae0d76485de68f5a1af783c4cc87b053222f0128b25498b944867",
+      "file": "verse-295.mp3"
+    },
+    {
+      "index": 296,
+      "reference": "Jeremiah 17:7",
+      "translation": "King James Version",
+      "sha256": "98be175db0f1f529bc04a6425be55ed0bbb55c845c9c3548f28b14f98067af26",
+      "file": "verse-296.mp3"
+    },
+    {
+      "index": 297,
+      "reference": "Proverbs 21:21",
+      "translation": "King James Version",
+      "sha256": "165aeda2d69554e68636cc5ea461561de0bae25006ce2be5f7bfb175c4a75ca0",
+      "file": "verse-297.mp3"
+    },
+    {
+      "index": 298,
+      "reference": "Luke 12:34",
+      "translation": "King James Version",
+      "sha256": "022eed2a5e0f68f698e6d7f2e279c5bbf65ecb20071dfae8c4f0740aeb71ee31",
+      "file": "verse-298.mp3"
+    },
+    {
+      "index": 299,
+      "reference": "John 10:10",
+      "translation": "King James Version",
+      "sha256": "d24e690f6e58990c0625eea73dde295b86b07f49d4ec2cd405e81e2f4658ff09",
+      "file": "verse-299.mp3"
+    },
+    {
+      "index": 300,
+      "reference": "Psalm 119:105",
+      "translation": "King James Version",
+      "sha256": "a35d2abe3094545bbe54273c460a191a800ca9a231c53d21be2322f1f8c44108",
+      "file": "verse-300.mp3"
+    },
+    {
+      "index": 301,
+      "reference": "John 4:14",
+      "translation": "King James Version",
+      "sha256": "40be6bee045ad275faffd44436fc2001f07a5c4b55fe3a1c47fb4aac3d54b84a",
+      "file": "verse-301.mp3"
+    },
+    {
+      "index": 302,
+      "reference": "Ephesians 6:11",
+      "translation": "King James Version",
+      "sha256": "2887d2f19dcf03858f694d5496d734451698348531817f420c648272a5a06b47",
+      "file": "verse-302.mp3"
+    },
+    {
+      "index": 303,
+      "reference": "Galatians 6:9",
+      "translation": "King James Version",
+      "sha256": "76cb5f08cf5bced04884a61282181b91f51a0d15feba8bf3171b8ecf3d5d91c4",
+      "file": "verse-303.mp3"
+    },
+    {
+      "index": 304,
+      "reference": "Psalm 103:8",
+      "translation": "King James Version",
+      "sha256": "9fac0abe6a9bd12c45c98fd65927d6460afdf10052ce7ffab093dbdc4f8809ce",
+      "file": "verse-304.mp3"
+    },
+    {
+      "index": 305,
+      "reference": "Job 42:5",
+      "translation": "King James Version",
+      "sha256": "1c3c79e2a6e643dab154f9bc05d5bc518092c5991ec03dc2c6a8d4a509c77c80",
+      "file": "verse-305.mp3"
+    },
+    {
+      "index": 306,
+      "reference": "John 20:29",
+      "translation": "King James Version",
+      "sha256": "1b7eb01de270543721ca4e820a5274259b96e9d946c63c783a10262b20bf99ad",
+      "file": "verse-306.mp3"
+    },
+    {
+      "index": 307,
+      "reference": "1 Samuel 17:47",
+      "translation": "King James Version",
+      "sha256": "2da507441d192fa77926434407322aaa22d406b92f7249f02269f81dc761d124",
+      "file": "verse-307.mp3"
+    },
+    {
+      "index": 308,
+      "reference": "Jonah 2:7",
+      "translation": "King James Version",
+      "sha256": "6149b508001bb5a385637e31b79fdf91b8e5056b5edfa4a57f4102be6e396b8b",
+      "file": "verse-308.mp3"
+    },
+    {
+      "index": 309,
+      "reference": "Ecclesiastes 9:10",
+      "translation": "King James Version",
+      "sha256": "6c7d6c0a578eaed0f4729b193c79277891d4290906e160397e54ea261a9798fb",
+      "file": "verse-309.mp3"
+    },
+    {
+      "index": 310,
+      "reference": "Deuteronomy 31:8",
+      "translation": "King James Version",
+      "sha256": "a39ec7d3f12efc6ba50de697a689984d63c60db35aeef52f1333aad2e69d9c31",
+      "file": "verse-310.mp3"
+    },
+    {
+      "index": 311,
+      "reference": "1 Kings 19:12",
+      "translation": "King James Version",
+      "sha256": "f2248bfdb13cbfabef2132f05d84b18e2b8cccb669cd6fe12041e41e7701c59c",
+      "file": "verse-311.mp3"
+    },
+    {
+      "index": 312,
+      "reference": "Proverbs 14:12",
+      "translation": "King James Version",
+      "sha256": "e38dd8c20ce50779c149851043074e4d8cccf0922549d069175611f676d8b213",
+      "file": "verse-312.mp3"
+    },
+    {
+      "index": 313,
+      "reference": "John 3:17",
+      "translation": "King James Version",
+      "sha256": "8d352bf8dd04b7e147838324cf95c44d432f39d79fef674046a6790081c52b4f",
+      "file": "verse-313.mp3"
     }
   ]
 }
